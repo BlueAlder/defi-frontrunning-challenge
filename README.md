@@ -20,11 +20,21 @@ Install dependencies:
 
 Write your exploit in the `test/challenge.ts` file within the EXPLOIT section. 
 
+Ensure you interact with the contract as the `attacker`. You can do this with 
+
+`const attackerVault = this.vault.connect(attacker)`
+
+Then interact with the new `attackerVault` var.
+
+--
+
 Test your exploit by running:
 
 `npx hardhat test`
 
 If the test passes then you have won! If not, try harder :).
+
+
 
 
 ---
