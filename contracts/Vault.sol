@@ -22,6 +22,7 @@ contract Vault {
 
         require(hashedPassword == hashedSecret, "Incorrect Password");
         sendFunds(payable(msg.sender));
+        unlocked = true;
     }
 
     function sendFunds(address payable to) internal {
